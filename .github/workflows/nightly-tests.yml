@@ -25,6 +25,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -33,7 +34,7 @@ jobs:
           persist-credentials: false
 
       - name: Install cbindgen
-        uses: $/.github/actions/cargo-tool-install
+        uses: ./.github/actions/cargo-tool-install
         with:
           tool-name: cbindgen
 
@@ -68,6 +69,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -79,7 +81,7 @@ jobs:
         run: echo "MIRI_TOOLCHAIN=$(bash scripts/tool-version.sh miri)" >> "$GITHUB_ENV"
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
@@ -119,6 +121,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -127,7 +130,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
@@ -161,6 +164,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -169,7 +173,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: ${{ matrix.python-version }}
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
@@ -197,6 +201,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -205,7 +210,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.14"
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
@@ -241,6 +246,7 @@ jobs:
           egress-policy: ${{ vars.STEP_SECURITY_EGRESS_POLICY || 'block' }}
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }} ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -249,7 +255,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           free-disk-space: "true"
@@ -279,6 +285,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -287,7 +294,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
@@ -326,6 +333,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
             crates.io:443
             index.crates.io:443
             static.crates.io:443
@@ -337,7 +345,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           build-type: "test"
@@ -369,6 +377,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -377,7 +386,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
@@ -412,6 +421,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -420,7 +430,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
@@ -452,6 +462,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -460,7 +471,7 @@ jobs:
           persist-credentials: false
 
       - name: Common setup
-        uses: $/.github/actions/common-setup
+        uses: ./.github/actions/common-setup
         with:
           python-version: "3.13"
           # free-disk-space auto-skips on the nautilus-ci-runner-* pool.
