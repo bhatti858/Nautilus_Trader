@@ -26,6 +26,7 @@ jobs:
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
             static.rust-lang.org:443
+            index.crates.io:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
