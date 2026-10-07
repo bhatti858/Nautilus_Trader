@@ -29,6 +29,13 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            packages.microsoft.com:443
+            azure.archive.ubuntu.com:443
+            motd.ubuntu.com:443
+            esm.ubuntu.com:443
+            api.snapcraft.io:443
+            archive.ubuntu.com:443
+            security.ubuntu.com:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -127,6 +134,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            ghcr.io:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -175,6 +183,7 @@ jobs:
           allowed-endpoints: >-
             ${{ vars.COMMON_ALLOWED_ENDPOINTS }}
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
+            static.rust-lang.org:443
             crl.globalsign.com:80
             ocsp.globalsign.com:80
             ocsp2.globalsign.com:80
