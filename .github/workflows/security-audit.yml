@@ -152,6 +152,8 @@ jobs:
             static.crates.io:443
             github.com:443
             codeload.github.com:443
+            releases.astral.sh:443
+            release-assets.githubusercontent.com:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -211,6 +213,8 @@ jobs:
             static.crates.io:443
             github.com:443
             codeload.github.com:443
+            releases.astral.sh:443
+            release-assets.githubusercontent.com:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
