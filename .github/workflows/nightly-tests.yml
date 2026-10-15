@@ -27,6 +27,7 @@ jobs:
             ${{ vars.CI_ALLOWED_ENDPOINTS }}
             static.rust-lang.org:443
             index.crates.io:443
+            static.crates.io:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
@@ -338,6 +339,15 @@ jobs:
             crates.io:443
             index.crates.io:443
             static.crates.io:443
+            archive.ubuntu.com:80
+            archive.ubuntu.com:443
+            security.ubuntu.com:80
+            security.ubuntu.com:443
+            azure.archive.ubuntu.com:80
+            azure.archive.ubuntu.com:443
+            packages.microsoft.com:443
+            motd.ubuntu.com:443
+            esm.ubuntu.com:443
 
       - name: Checkout repository
         # https://github.com/actions/checkout
